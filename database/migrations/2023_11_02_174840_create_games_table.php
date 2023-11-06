@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('winner_id')->default(0);
+            $table->unsignedBigInteger('winner_id')->nullable()->default(0);
             $table->timestamps();
         });
     }
